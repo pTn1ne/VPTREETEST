@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.upload-box {
+    margin-bottom: 20px;
+}
+
+#resultTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resultTable th, #resultTable td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.anomaly {
+    background-color: #ffcccc;
+}
