@@ -1,93 +1,103 @@
-/* ===== GENERAL ===== */
+/* BASIC RESET */
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     background: #111;
     color: white;
-    overflow-x: hidden;
 }
 
 section {
-    padding: 20px 5%;
-}
-
-/* ===== HERO SECTION ===== */
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
-
-.btn-primary {
-    display: inline-block;
-    background: #ffdd57;
-    color: #111;
-    padding: 15px 35px;
-    border-radius: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-
-    transition: 0.25s;
-}
-
-.btn-primary:hover {
-    transform: scale(1.08);
-    background: white;
-}
-
-/* ===== SECTIONS ===== */
-
-.section {
+    padding: 60px 10%;
     text-align: center;
 }
 
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+/* HEADER */
+header {
+    padding: 15px 10%;
+    background: #000;
+    border-bottom: 1px solid #222;
 }
 
-/* ===== FEATURES ===== */
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+.logo {
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.feature-card {
-    background: #1c1c1c;
-    padding: 25px;
-    border-radius: 12px;
-    transition: 0.3s;
+
+/* INTRO SECTION */
+.intro {
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    padding: 60px 10%;
+    border-radius: 0 0 25px 25px;
 }
 
-.feature-card:hover {
-    transform: translateY(-8px);
-    background: #272727;
+.intro h1 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-/* ===== TEAM ===== */
+.intro p {
+    font-size: 18px;
+    opacity: 0.95;
+    margin-bottom: 25px;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #ffdd57;
+    color: #111;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.btn-main:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+
+/* ABOUT SECTION */
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* TEAM SECTION */
+.team-section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
 
 .team-grid {
     display: flex;
     justify-content: center;
+    gap: 25px;
     flex-wrap: wrap;
-    gap: 25px;  /* giảm khoảng cách giữa 3 card */
 }
 
 .team-card {
     background: #1c1c1c;
-    width: 260px;          /* GIẢM từ 280 xuống 260 để đứng sát hơn */
-    padding: 25px;
+    padding: 20px;
+    width: 260px;
     border-radius: 14px;
-    text-align: center;
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 .team-card:hover {
-    transform: translateY(-7px);
-    background: #272727;
+    transform: translateY(-5px);
+    background: #252525;
 }
 
 .team-card img {
@@ -95,23 +105,29 @@ section {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-/* ===== FOOTER ===== */
+.team-card h3 {
+    margin: 5px 0;
+}
+
+
+/* FOOTER */
 footer {
+    margin-top: 40px;
+    padding: 25px;
     background: #000;
-    padding: 20px;
     text-align: center;
     opacity: 0.8;
 }
 
-/* ===== FADE-IN SCROLL EFFECT ===== */
 
+/* FADE-IN EFFECT */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 1.2s forwards;
+    animation: fadeInUp 1s forwards;
 }
 
 @keyframes fadeInUp {
@@ -119,103 +135,4 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* INTRO TEXT */
-.intro-text {
-    font-size: 18px;
-    line-height: 1.7;
-    max-width: 900px;
-    margin: auto;
-    opacity: 0.95;
-}
-
-/* SMALL RUN BUTTON */
-.btn-run {
-    display: inline-block;
-    background: #ffd83d;
-    color: #111;
-    padding: 12px 26px;
-    border-radius: 25px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 28px;
-    transition: 0.25s;
-}
-
-.btn-run:hover {
-    transform: scale(1.08);
-    background: #fff;
-}
-
-/* TEAM LINK (click avatar or name) */
-.team-card a {
-    text-decoration: none;
-    color: white;
-}
-
-.team-card a:hover h3 {
-    color: #ffd83d;
-    transition: 0.2s;
-}
-
-/* ===== COMPACT INTRO SECTION ===== */
-
-.intro {
-    background: linear-gradient(135deg, #4a00e0, #8e2de2);
-    padding: 40px 20px;   /* FIX: giảm chiều cao */
-    text-align: center;
-    min-height: auto;     /* FIX: không kéo dài màn hình */
-    color: white;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    animation: gradientMove 10s infinite alternate;
-}
-
-.intro-container {
-    max-width: 800px;
-    margin: auto;
-}
-
-.intro-icon {
-    font-size: 48px;
-    animation: float 2s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-6px); }
-    100% { transform: translateY(0); }
-}
-
-.intro-title {
-    font-size: 34px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.intro-desc {
-    font-size: 18px;
-    line-height: 1.6;
-    opacity: 0.95;
-    margin-bottom: 25px;
-}
-
-.btn-run-small {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 18px;
-    background: #ffdd57;
-    color: #111;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s;
-}
-
-.btn-run-small:hover {
-    transform: scale(1.07);
-    background: #fff;
 }
