@@ -91,21 +91,20 @@ section {
 
 /* ===== TEAM ===== */
 
-/* TEAM GRID FIXED */
 .team-grid {
     display: flex;
-    justify-content: center; 
-    gap: 40px;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 25px;  /* giảm khoảng cách giữa 3 card */
 }
 
-/* CARD WIDTH FIXED */
 .team-card {
-    width: 280px;
-    min-height: 360px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: #1c1c1c;
+    width: 260px;          /* GIẢM từ 280 xuống 260 để đứng sát hơn */
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    transition: 0.3s;
 }
 
 .team-card:hover {
@@ -114,8 +113,8 @@ section {
 }
 
 .team-card img {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
