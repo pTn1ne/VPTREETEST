@@ -13,31 +13,9 @@ section {
 
 /* ===== HERO SECTION ===== */
 
-.hero {
-    height: 100vh;
-    background: linear-gradient(135deg, #4a00e0, #8e2de2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    animation: gradientMove 10s infinite alternate;
-}
-
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero-content h2 {
-    font-size: 22px;
-    opacity: 0.9;
-    margin-bottom: 40px;
 }
 
 .btn-primary {
