@@ -2,34 +2,97 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Log Anomaly Detector</title>
+    <title>Log Inspector - Trie + EVT</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>🔍 Phát hiện chuỗi bất thường (Trie + EVT)</h1>
+<div class="container">
 
-<div class="upload-box">
-    <input type="file" id="fileInput" accept=".txt,.log">
-    <button onclick="processFile()">Tải và Phân tích</button>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>🔎 Log Inspector</h2>
+
+        <button onclick="switchTab('upload')">📁 Upload File</button>
+        <button onclick="switchTab('logviewer')">📄 Log Viewer</button>
+        <button onclick="switchTab('anomalies')">⚠️ Anomalies</button>
+        <button onclick="switchTab('trie')">🌳 Trie Viewer</button>
+        <button onclick="switchTab('dashboard')">📊 Dashboard</button>
+        <button onclick="switchTab('about')">ℹ️ About</button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <!-- UPLOAD TAB -->
+        <div class="tab" id="upload">
+            <h1>📁 Tải file log</h1>
+            <input type="file" id="fileInput">
+            <button onclick="processFile()">Tải và Phân tích</button>
+            <p id="uploadStatus"></p>
+        </div>
+
+        <!-- LOG VIEWER TAB -->
+        <div class="tab" id="logviewer">
+            <h1>📄 Log Viewer</h1>
+            <pre id="logContent" class="log-box"></pre>
+        </div>
+
+        <!-- ANOMALIES TAB -->
+        <div class="tab" id="anomalies">
+            <h1>⚠️ Các dòng bất thường</h1>
+
+            <table id="anomalyTable">
+                <thead>
+                    <tr>
+                        <th>Dòng</th>
+                        <th>Nội dung</th>
+                        <th>Score</th>
+                        <th>Lý do</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <button onclick="exportCSV()">📤 Xuất CSV</button>
+        </div>
+
+        <!-- TRIE VIEWER TAB -->
+        <div class="tab" id="trie">
+            <h1>🌳 Trie Viewer (Mock)</h1>
+            <div id="trieContainer">
+                (Trie sẽ được hiển thị ở đây)
+            </div>
+        </div>
+
+        <!-- DASHBOARD TAB -->
+        <div class="tab" id="dashboard">
+            <h1>📊 Dashboard thống kê</h1>
+
+            <div class="stats-grid">
+                <div class="stat-card" id="totalLines">—</div>
+                <div class="stat-card" id="totalAnomalies">—</div>
+                <div class="stat-card" id="uniqueTemplates">—</div>
+                <div class="stat-card" id="rareTemplates">—</div>
+            </div>
+
+            <canvas id="scoreChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- ABOUT TAB -->
+        <div class="tab" id="about">
+            <h1>ℹ️ About project</h1>
+            <p>Đề tài: Nén và phát hiện chuỗi bất thường bằng Trie và EVT</p>
+            <p>Hệ thống gồm: Trie Builder – Template Frequency – EVT Anomaly Detection</p>
+            <p>UI Style: Log Inspector + Dashboard</p>
+        </div>
+
+    </div>
 </div>
 
-<div id="result" style="display:none;">
-    <h2>Kết quả phân tích</h2>
-    <table id="resultTable">
-        <thead>
-            <tr>
-                <th>Dòng</th>
-                <th>Nội dung</th>
-                <th>Anomaly Score</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-
-    <button onclick="exportCSV()">📤 Xuất CSV</button>
-</div>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="app.js"></script>
+
 </body>
 </html>
