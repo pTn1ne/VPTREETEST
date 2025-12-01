@@ -2,97 +2,95 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Log Inspector - Trie + EVT</title>
+    <title>Trie + EVT Anomaly Detection</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+<!-- Hero Section -->
+<section class="hero fade-in">
+    <div class="hero-content">
+        <h1>🔥 Hệ thống Phát hiện Chuỗi Bất thường</h1>
+        <h2>Trie Compression • Statistical Frequency • EVT</h2>
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <h2>🔎 Log Inspector</h2>
-
-        <button onclick="switchTab('upload')">📁 Upload File</button>
-        <button onclick="switchTab('logviewer')">📄 Log Viewer</button>
-        <button onclick="switchTab('anomalies')">⚠️ Anomalies</button>
-        <button onclick="switchTab('trie')">🌳 Trie Viewer</button>
-        <button onclick="switchTab('dashboard')">📊 Dashboard</button>
-        <button onclick="switchTab('about')">ℹ️ About</button>
+        <a href="https://your-demo-link-here.com" target="_blank" class="btn-primary">
+            🚀 Chạy chương trình
+        </a>
     </div>
+</section>
 
-    <!-- MAIN CONTENT -->
-    <div class="main">
+<!-- About Project -->
+<section class="section fade-in" id="about">
+    <h2>📘 Giới thiệu Đề tài</h2>
+    <p>
+        Nhóm chúng tôi xây dựng một hệ thống <b>nén chuỗi bằng Trie</b>, 
+        kết hợp <b>thống kê tần suất</b> và <b>Extreme Value Theory (EVT)</b>
+        để phát hiện những chuỗi bất thường trong log hệ thống.
+    </p>
+</section>
 
-        <!-- UPLOAD TAB -->
-        <div class="tab" id="upload">
-            <h1>📁 Tải file log</h1>
-            <input type="file" id="fileInput">
-            <button onclick="processFile()">Tải và Phân tích</button>
-            <p id="uploadStatus"></p>
+<!-- Features -->
+<section class="section fade-in" id="features">
+    <h2>✨ Tính năng nổi bật</h2>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>🌳 Trie Compression</h3>
+            <p>Nén các chuỗi log bằng cấu trúc cây Trie thông minh.</p>
         </div>
 
-        <!-- LOG VIEWER TAB -->
-        <div class="tab" id="logviewer">
-            <h1>📄 Log Viewer</h1>
-            <pre id="logContent" class="log-box"></pre>
+        <div class="feature-card">
+            <h3>📈 Statistical Analysis</h3>
+            <p>Đo tần suất templates, phát hiện chuỗi hiếm.</p>
         </div>
 
-        <!-- ANOMALIES TAB -->
-        <div class="tab" id="anomalies">
-            <h1>⚠️ Các dòng bất thường</h1>
-
-            <table id="anomalyTable">
-                <thead>
-                    <tr>
-                        <th>Dòng</th>
-                        <th>Nội dung</th>
-                        <th>Score</th>
-                        <th>Lý do</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-
-            <button onclick="exportCSV()">📤 Xuất CSV</button>
+        <div class="feature-card">
+            <h3>⚠️ EVT Anomaly Detection</h3>
+            <p>Ứng dụng Extreme Value Theory để phát hiện bất thường.</p>
         </div>
 
-        <!-- TRIE VIEWER TAB -->
-        <div class="tab" id="trie">
-            <h1>🌳 Trie Viewer (Mock)</h1>
-            <div id="trieContainer">
-                (Trie sẽ được hiển thị ở đây)
-            </div>
+        <div class="feature-card">
+            <h3>⚡ Hiệu năng cao</h3>
+            <p>Phân tích log lớn theo thời gian thực.</p>
         </div>
-
-        <!-- DASHBOARD TAB -->
-        <div class="tab" id="dashboard">
-            <h1>📊 Dashboard thống kê</h1>
-
-            <div class="stats-grid">
-                <div class="stat-card" id="totalLines">—</div>
-                <div class="stat-card" id="totalAnomalies">—</div>
-                <div class="stat-card" id="uniqueTemplates">—</div>
-                <div class="stat-card" id="rareTemplates">—</div>
-            </div>
-
-            <canvas id="scoreChart" width="400" height="200"></canvas>
-        </div>
-
-        <!-- ABOUT TAB -->
-        <div class="tab" id="about">
-            <h1>ℹ️ About project</h1>
-            <p>Đề tài: Nén và phát hiện chuỗi bất thường bằng Trie và EVT</p>
-            <p>Hệ thống gồm: Trie Builder – Template Frequency – EVT Anomaly Detection</p>
-            <p>UI Style: Log Inspector + Dashboard</p>
-        </div>
-
     </div>
-</div>
+</section>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="app.js"></script>
+<!-- Team -->
+<section class="section fade-in" id="team">
+    <h2>👥 Thành viên nhóm</h2>
+
+    <div class="team-grid">
+        <div class="team-card">
+            <img src="https://i.imgur.com/0y8Ftya.png">
+            <h3>Nguyễn Văn A</h3>
+            <p>Leader</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://i.imgur.com/0y8Ftya.png">
+            <h3>Trần Văn B</h3>
+            <p>Phụ trách Trie</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://i.imgur.com/0y8Ftya.png">
+            <h3>Lê Văn C</h3>
+            <p>Phụ trách EVT</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://i.imgur.com/0y8Ftya.png">
+            <h3>Phạm Văn D</h3>
+            <p>UI + Documentation</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 - Nhóm KSTN - Trie + EVT Anomaly Detection</p>
+</footer>
 
 </body>
 </html>
