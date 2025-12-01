@@ -140,3 +140,43 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* INTRO TEXT */
+.intro-text {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: auto;
+    opacity: 0.95;
+}
+
+/* SMALL RUN BUTTON */
+.btn-run {
+    display: inline-block;
+    background: #ffd83d;
+    color: #111;
+    padding: 12px 26px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 28px;
+    transition: 0.25s;
+}
+
+.btn-run:hover {
+    transform: scale(1.08);
+    background: #fff;
+}
+
+/* TEAM LINK (click avatar or name) */
+.team-card a {
+    text-decoration: none;
+    color: white;
+}
+
+.team-card a:hover h3 {
+    color: #ffd83d;
+    transition: 0.2s;
+}
+
