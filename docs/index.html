@@ -24,12 +24,21 @@
 </section>
 
 <!-- GIỚI THIỆU -->
+<!-- GIỚI THIỆU -->
 <section class="about fade-in">
     <h2>📘 Giới thiệu Đề Tài</h2>
+
     <p>
-        Dự án tập trung vào việc phân tích log hệ thống quy mô lớn và phát hiện 
-        các mẫu bất thường dựa trên cấu trúc và tần suất xuất hiện.
-        Giải pháp giúp tăng độ chính xác trong việc giám sát lỗi hệ thống thời gian thực.
+        Hệ thống được xây dựng nhằm phát hiện các chuỗi bất thường trong log hệ thống bằng cách kết hợp 
+        <b>Trie Compression</b>, <b>phân tích thống kê tần suất</b> và <b>Extreme Value Theory (EVT)</b>. 
+        Cấu trúc Trie giúp nén dữ liệu hiệu quả, trích mẫu log ổn định và phát hiện các chuỗi hiếm hay sai cấu trúc.
+        <br><br>
+        Trên các mẫu log này, hệ thống sử dụng EVT để mô hình hóa đuôi phân phối tần suất, từ đó nhận diện những giá trị cực trị 
+        — vốn thường tương ứng với lỗi tiềm ẩn, sự cố hoặc hành vi bất thường. Phương pháp không dùng mô hình học sâu, 
+        đảm bảo <b>nhẹ – nhanh – thích ứng tốt</b> trong môi trường tài nguyên hạn chế.
+        <br><br>
+        Giải pháp hướng đến mục tiêu <b>phát hiện bất thường thời gian thực</b>, độ chính xác cao và phù hợp cho giám sát các hệ thống 
+        lớn như cloud, backend hay microservices.
     </p>
 </section>
 
