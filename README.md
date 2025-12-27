@@ -30,8 +30,8 @@ Dự án xây dựng hệ thống **LogDrainTrie** - một giải pháp tối ư
 ---
 
 ## 🚀 Hướng dẫn Sử dụng
-1. Truy cập trang web giới thiệu hoặc mở trực tiếp file trong thư mục `source/`.
-2. Nhấn nút **Run Program** (link Google Colab) để mở môi trường thực thi.
+1. Truy cập trang web giới thiệu hoặc mở trực tiếp file trong thư mục `source/` và chạy trên google colab.
+2. Nhấn nút **Run Program** để mở môi trường thực thi.
 3. Tải các file dữ liệu từ thư mục `data/` lên Colab để tiến hành kiểm thử.
 
 ---
